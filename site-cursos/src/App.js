@@ -6,16 +6,14 @@ import '../node_modules/popper.js/dist/umd/popper.min';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-import Cursos from './pages/cursos'
-import Contato from './pages/contato'
 import Menu from './components/menu'
+import Rotas from './rotas'
 
 function App() {
   return (
     <div>
       <Menu></Menu>
-      <Cursos></Cursos>
-      <Contato></Contato>
+      <Rotas/>
     </div>
   );
 }
