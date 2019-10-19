@@ -5,7 +5,8 @@
   "main": "loader.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .\node_modules\nodemon\bin\nodemon.js"
   },
   "author": "Rafael Mazzucato",
   "license": "ISC",
