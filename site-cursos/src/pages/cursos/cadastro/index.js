@@ -29,7 +29,10 @@ export default class Cadastro extends Component {
     }
 
     listar() {
-        axios.get(URL).then(response => this.setState({ ...this.state, data: response.data }))
+        axios.get(URL).then(response => {
+            this.setState({ ...this.state, data: response.data })
+            this.props.atualizaTotal(response.data.length)
+        })
     }
 
     adicionarCurso(e) {
