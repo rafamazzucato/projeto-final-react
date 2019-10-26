@@ -14,8 +14,8 @@ export default class Formulario extends React.Component {
                         </label>
                         <div className="col-sm-9">
                             <input type="number"
-                                className="form-control" id="codigo" value={this.props.codigo} 
-                                onChange={(e) => {this.props.alteraCampos(e.target)}}/>
+                                className="form-control" id="codigo" value={this.props.codigo}
+                                onChange={(e) => { this.props.alteraCampos(e.target) }} />
                         </div>
                     </div>
                     <div className="form-group row">
@@ -25,8 +25,8 @@ export default class Formulario extends React.Component {
                         </label>
                         <div className="col-sm-9">
                             <input type="text"
-                                className="form-control" id="descricao" value={this.props.descricao} 
-                                onChange={(e) => {this.props.alteraCampos(e.target)}}/>
+                                className="form-control" id="descricao" value={this.props.descricao}
+                                onChange={(e) => { this.props.alteraCampos(e.target) }} />
                         </div>
                     </div>
 
@@ -36,8 +36,8 @@ export default class Formulario extends React.Component {
                             Carga Horária:</label>
                         <div className="col-sm-9">
                             <input type="number"
-                                className="form-control" id="cargaHoraria" value={this.props.cargaHoraria} 
-                                onChange={(e) => {this.props.alteraCampos(e.target)}}/>
+                                className="form-control" id="cargaHoraria" value={this.props.cargaHoraria}
+                                onChange={(e) => { this.props.alteraCampos(e.target) }} />
                         </div>
                     </div>
                     <div className="form-group row">
@@ -46,8 +46,8 @@ export default class Formulario extends React.Component {
                             Preço:</label>
                         <div className="col-sm-9">
                             <input type="number"
-                                className="form-control" id="preco"  value={this.props.preco}
-                                onChange={(e) => {this.props.alteraCampos(e.target)}}/>
+                                className="form-control" id="preco" value={this.props.preco}
+                                onChange={(e) => { this.props.alteraCampos(e.target) }} />
                         </div>
                     </div>
                     <div className="form-group row">
@@ -55,7 +55,7 @@ export default class Formulario extends React.Component {
                             className="col-sm-3 col-form-label">Categoria:</label>
                         <div className="col-sm-9">
                             <select className="form-control" id="categoria" value={this.props.categoria}
-                                onChange={(e) => {this.props.alteraCampos(e.target)}}>
+                                onChange={(e) => { this.props.alteraCampos(e.target) }}>
                                 <option>INFORMATICA</option>
                                 <option>ENGENHARIA</option>
                                 <option>ADMINISTRACAO</option>
@@ -65,8 +65,12 @@ export default class Formulario extends React.Component {
                     </div>
                     <div className="form-group row">
                         <button onClick={this.props.adicionarCurso}
-                            className="btn btn-primary ml-3 mb-3">
-                            Adicionar
+                            className="btn btn-primary ml-3 mb-3 mr-3">
+                            {this.props.textoBotao}
+                        </button>
+
+                        <button className="btn btn-primary ml-3 mb-3"
+                            onClick={this.props.limpar}>Limpar
                         </button>
                     </div>
                 </form>
