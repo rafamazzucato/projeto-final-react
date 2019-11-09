@@ -1,28 +1,12 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
-import CursoForm from '../form'
-import CursoList from '../list'
+import CursoForm from './form'
+import CursoList from './lista'
 
 const URL = "http://localhost:3200/api/curso"
 
 export default class Cadastro extends Component {
-
-    initialState = {
-        data: [],
-        _id: '',
-        codigo: 0,
-        descricao: '',
-        cargaHoraria: 0,
-        preco: 0.0,
-        categoria: 'REDES',
-        textoBotao : 'Adicionar'
-    }
-
-    constructor(props){
-        super(props)
-        this.state = this.initialState
-    }
 
     componentWillMount() {
         this.listar()
@@ -30,8 +14,8 @@ export default class Cadastro extends Component {
 
     listar() {
         axios.get(URL).then(response => {
-            this.setState({ ...this.state, data: response.data })
-            this.props.atualizaTotal(response.data.length)
+            // this.setState({ ...this.state, data: response.data })
+            // this.props.atualizaTotal(response.data.length)
         })
     }
 
@@ -145,18 +129,12 @@ export default class Cadastro extends Component {
             <div className="row border-bottom">
                 <div className="col-md-6">
                     <CursoForm alteraCampos={this.alteraCampos.bind(this)}
-                        codigo={this.state.codigo}
-                        descricao={this.state.descricao}
-                        cargaHoraria={this.state.cargaHoraria}
-                        preco={this.state.preco}
-                        categoria={this.state.categoria}
                         adicionarCurso={this.adicionarCurso.bind(this)}
-                        textoBotao={this.state.textoBotao}
                         limpar={this.limpar.bind(this)}
                     />
                 </div>
                 <div className="col-md-6">
-                    <CursoList batatas={this.state.data}
+                    <CursoList
                         removerCurso={this.removerCurso.bind(this)}
                         consultarCurso={this.consultarCurso.bind(this)} />
                 </div>
