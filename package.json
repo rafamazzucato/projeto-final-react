@@ -1,0 +1,26 @@
+{
+  "name": "projeto-final-react",
+  "version": "1.0.0",
+  "description": "Treinamento React Impacta",
+  "main": "index.js",
+  "dependencies": {
+    "expo-cli": "^3.4.1",
+    "react-native-cli": "^2.0.1",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafamazzucato/projeto-final-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafamazzucato/projeto-final-react/issues"
+  },
+  "homepage": "https://github.com/rafamazzucato/projeto-final-react#readme"
+}
