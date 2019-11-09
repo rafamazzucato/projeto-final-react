@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import Cabecalho from '../../components/cabecalho'
 import Cadastro from './cadastro'
+import {connect} from 'react-redux'
 
-export default class Curso extends Component {
+const mapStateToProps = state => ({
+    lista : state.curso.lista
+})
 
-    state = {
-        total : 0
-    }
-
-    atualizaTotal(total){
-        this.setState({total})
-    }
+class Curso extends Component {
 
     render() {
         return (
             <div className="container">
-                <Cabecalho titulo="Cursos" subtitulo={`gerenciamento dos cursos - Total de cursos ${this.state.total}`} />
-                <Cadastro atualizaTotal={this.atualizaTotal.bind(this)}/>
+                <Cabecalho titulo="Cursos" subtitulo={`gerenciamento dos cursos - Total de cursos ${this.props.lista.length}`} />
+                <Cadastro />
             </div>
         )
     }
 }
+
+export default connect(mapStateToProps, null) (Curso)
