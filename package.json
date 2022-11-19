@@ -4,7 +4,7 @@
   "description": "Treinamento React Impacta",
   "main": "index.js",
   "dependencies": {
-    "expo-cli": "^3.4.1",
+    "expo-cli": "^6.0.8",
     "react-native-cli": "^2.0.1",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4"
